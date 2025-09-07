@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Minecraft – Улюблена гра</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1d1d1d;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #2e8b57;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    nav {
+      background: #222;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #00ff80;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border: 2px solid #444;
+      border-radius: 6px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .video {
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .video iframe {
+      width: 90%;
+      height: 400px;
+      max-width: 700px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .buttons button {
+      background-color: #2e8b57;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .buttons button:hover {
+      background-color: #3cb371;
+    }
+
+    footer {
+      background: #111;
+      color: #888;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌍 Minecraft – Краща гра всіх часів!</h1>
+    <p>Будуй, виживай, досліджуй нескінченний світ!</p>
+  </header>
+
+  <nav>
+    <a href="#about">Про гру</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#video">Відео</a>
+    <a href="#download">Скачати</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="about">
+      <h2>Що таке Minecraft?</h2>
+      <p>
+        <strong>Minecraft</strong> — це пісочниця з відкритим світом, де ти можеш будувати, руйнувати, досліджувати та створювати все, що забажаєш.
+        Грай сам або з друзями, досліджуй підземелля, бійся криперів і вирушай у Пекло або Ендер-світ!
+      </p>
+    </section>
+
+    <section id="gallery">
+      <h2>Галерея</h2>
+      <div class="gallery">
+        <img src="https://i.imgur.com/O8iZVYX.jpeg" alt="Minecraft 1">
+        <img src="https://i.imgur.com/BZ5Drsb.jpeg" alt="Minecraft 2">
+        <img src="https://i.imgur.com/MsYI4jM.jpeg" alt="Minecraft 3">
+        <img src="https://i.imgur.com/V7HE2vZ.jpeg" alt="Minecraft 4">
+      </div>
+    </section>
+
+    <section id="video" class="video">
+      <h2>🎬 Геймплей Minecraft</h2>
+      <iframe src="https://www.youtube.com/embed/MmB9b5njVbA" allowfullscreen></iframe>
+    </section>
+
+    <section id="download" class="buttons">
+      <h2>⬇️ Завантажити Minecraft</h2>
+      <button onclick="download('java')">Minecraft Java Edition</button>
+      <button onclick="download('bedrock')">Minecraft Bedrock Edition</button>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>Сайт створено фаном Minecraft. 🌿 Версія 1.0</p>
+  </footer>
+
+  <script>
+    function download(version) {
+      if (version === 'java') {
+        alert("Переходимо на сторінку завантаження Java Edition...");
+        window.location.href = 'https://www.minecraft.net/uk-ua/download';
+      } else if (version === 'bedrock') {
+        alert("Переходимо на сторінку Bedrock Edition...");
+        window.location.href = 'https://www.minecraft.net/uk-ua/store/minecraft-windows';
+      }
+    }
+  </script>
+
+</body>
+</html>
+
